@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="40fe0b71-0838-4175-835b-bf3498a28ccd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,7 +13,9 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution />
+    <execution>
+      <executable path="composer" />
+    </execution>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -138,6 +142,7 @@
       <path value="$PROJECT_DIR$/vendor/paragonie/constant_time_encoding" />
       <path value="$PROJECT_DIR$/vendor/defuse/php-encryption" />
       <path value="$PROJECT_DIR$/vendor/laravel/helpers" />
+      <path value="$PROJECT_DIR$/vendor/amirsorouri00/eventbrite" />
     </include_path>
   </component>
   <component name="ProjectId" id="1rt4h2p8pugoucVILgEdbpADjXa" />
@@ -177,6 +182,8 @@
       <workItem from="1619782168687" duration="9224000" />
       <workItem from="1619939129972" duration="2546000" />
       <workItem from="1620542324618" duration="8505000" />
+      <workItem from="1620571151010" duration="2578000" />
+      <workItem from="1620657421362" duration="3141000" />
     </task>
     <servers />
   </component>
@@ -188,6 +195,10 @@
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="555" y="215" width="800" height="686" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1619790437143" />
+    <state x="711" y="469" width="488" height="179" key="ComposerInitDialogKey" timestamp="1620572208935">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="711" y="469" width="488" height="179" key="ComposerInitDialogKey/0.28.1920.1052@0.28.1920.1052" timestamp="1620572208935" />
     <state width="1294" height="276" key="GridCell.Tab.0.bottom" timestamp="1619790460210">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>

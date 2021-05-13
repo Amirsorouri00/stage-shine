@@ -175,6 +175,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        // ... other providers
+        Amirsorouri00\Eventbrite\EventbriteServiceProvider::class,
+
     ],
 
     /*
@@ -228,6 +231,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        'Eventbrite' => Amirsorouri00\Eventbrite\Facades\Eventbrite::class
     ],
 
 ];

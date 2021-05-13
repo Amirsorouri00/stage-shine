@@ -32,5 +32,7 @@ Route::middleware('auth:api')->group(function () {
     Route::post('/logout', 'Auth\ApiAuthController@logout')->name('logout.api');
 });
 
+Route::get('/eventbrite/me', 'Eventbrite\TestController@getMe');
+
 //Route::post('route','Controller@method')->middleware('<middleware-name-here>');
 
