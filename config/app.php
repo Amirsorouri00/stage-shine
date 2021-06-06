@@ -177,6 +177,7 @@ return [
 
         // ... other providers
         Amirsorouri00\Eventbrite\EventbriteServiceProvider::class,
+        Spatie\Tags\TagsServiceProvider::class
 
     ],
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App\Schemas;
 
 
 use App\Constants\Tables;
@@ -13,6 +13,6 @@ class ChannelFollower extends BaseModel
 
     protected $table = Tables::STAGESHINE_CHANNEL_FOLLOWERS;
     protected $fillable = array('channel_id', 'user_id');
-//    protected $visible = array('id', 'channel_id', 'user_id');
+    protected $visible = array('channel_id', 'user_id');
 
 }

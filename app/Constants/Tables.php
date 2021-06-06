@@ -15,7 +15,7 @@ abstract class Tables
     const STAGESHINE_CHANNELS = 'channels';
     const STAGESHINE_CHANNEL_CATEGORY = 'channel_category';
     const STAGESHINE_CATEGORIES = 'categories';
-    const STAGESHINE_EVENT_STARS = 'event_stars';
+    const STAGESHINE_EVENT_RATE = 'event_rates';
     const STAGESHINE_EVENT_COMMENTS = 'event_comments';
     const STAGESHINE_USER_EVENTS = 'user_events';
     const STAGESHINE_CHANNEL_FOLLOWERS = 'channel_followers';

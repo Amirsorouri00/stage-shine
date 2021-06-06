@@ -1,16 +1,15 @@
 <?php
 
-namespace App\Models;
+namespace App\Schemas;
 
 
 use App\Constants\Tables;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Spatie\Tags\HasTags;
 
 class Event extends BaseModel
 {
-    use SoftDeletes, HasTags;
+    use SoftDeletes;
 
     protected $table = Tables::STAGESHINE_EVENTS;
     protected $fillable = array('name', 'language', 'start', 'duration', 'file_name', 'description', 'event_cover', 'channel_id', 'rate', 'limit');
@@ -20,4 +19,5 @@ class Event extends BaseModel
     {
         return $this->hasOne('Channel', 'channel_id');
     }
+
 }

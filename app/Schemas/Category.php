@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App\Schemas;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -11,6 +11,6 @@ class Category extends BaseModel
 
     protected $table = 'categories';
     protected $fillable = array('name');
-    protected $visible = array('id', 'name');
+    protected $visible = array('name');
 
 }

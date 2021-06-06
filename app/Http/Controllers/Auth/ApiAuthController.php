@@ -3,15 +3,52 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use \Illuminate\Http\Response;
 use Illuminate\Http\Request;
-
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
 
+
 class ApiAuthController extends Controller
 {
+    /**
+     * @OA\Post(
+     *      path="/api/register",
+     *      operationId="User Registration",
+     *      tags={"ApiAuthController"},
+     *      summary="Register new user",
+     *      description="Returns created user data",
+     *      @OA\RequestBody(
+     *          required=true,
+     *          @OA\JsonContent(
+     *              type="array",
+     *              @OA\Items(ref="#/components/schemas/User")
+     *          )
+     *      ),
+     *      @OA\Response(
+     *          response=201,
+     *          description="Successful operation",
+     *          @OA\Items(ref="#/components/schemas/User")
+     *       ),
+     *      @OA\Response(
+     *          response=400,
+     *          description="Bad Request",
+     *
+     *      ),
+     *      @OA\Response(
+     *          response=401,
+     *          description="Unauthenticated",
+     *
+     *      ),
+     *      @OA\Response(
+     *          response=403,
+     *          description="Forbidden",
+     *
+     *      )
+     * )
+     */
     public function register (Request $request) {
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
@@ -27,7 +64,7 @@ class ApiAuthController extends Controller
         $user = User::create($request->toArray());
         $token = $user->createToken('Laravel Password Grant Client')->accessToken;
         $response = ['token' => $token];
-        return response($response, 200);
+        return response($response, Response::HTTP_CREATED);
     }
 
     public function login (Request $request) {

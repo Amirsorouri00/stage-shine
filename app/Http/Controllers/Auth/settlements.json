@@ -1,0 +1,30 @@
+[
+    {
+       "id":2248,
+       "user_id":50000000,
+       "plan_id":1,
+       "start_date":"2021-05-31 20:58:07",
+       "duration":2880,
+       "plan_details":"{\"id\": 1, \"price\": 20000, \"title\": \"One\", \"status\": 1, \"is_show\": 0, \"duration\": 2, \"end_date\": null, \"store_id\": 1, \"max_books\": 5, \"price_usd\": 0, \"created_at\": \"2021-02-10T08:39:34.000000Z\", \"deleted_at\": null, \"max_audios\": 4, \"start_date\": \"2021-02-03\", \"updated_at\": \"2021-03-31T09:23:30.000000Z\", \"description\": null, \"max_devices\": 3, \"operator_id\": 2362812, \"remain_days\": 2, \"max_entities\": 9, \"remain_books\": 5, \"remain_audios\": 4, \"color_hex_code\": null, \"discount_price\": 0, \"max_offline_entities\": 1, \"plan_text_description\": null, \"total_publisher_share\": 30}",
+       "subscription_payment_id":1296,
+       "subscription_user_id":2233,
+       "settelment_date":"2021-06-02 20:58:07",
+       "settlement_duration":2,
+       "is_settled":0,
+       "had_entity":null
+    },
+    {
+       "id":2249,
+       "user_id":50000000,
+       "plan_id":6,
+       "start_date":"2021-05-31 20:58:09",
+       "duration":28800,
+       "plan_details":"{\"id\": 6, \"price\": 20000, \"title\": \"Store test\", \"status\": 1, \"is_show\": 1, \"duration\": 20, \"end_date\": null, \"store_id\": 2, \"max_books\": 5, \"price_usd\": 0, \"created_at\": \"2021-05-31T12:09:22.000000Z\", \"deleted_at\": null, \"max_audios\": 4, \"start_date\": \"2021-05-31\", \"updated_at\": \"2021-05-31T12:09:22.000000Z\", \"description\": null, \"max_devices\": 3, \"operator_id\": 2362812, \"remain_days\": 20, \"max_entities\": 9, \"remain_books\": 5, \"remain_audios\": 4, \"color_hex_code\": \"#23FF4500\", \"discount_price\": 0, \"max_offline_entities\": 1, \"plan_text_description\": null, \"total_publisher_share\": 30}",
+       "subscription_payment_id":1297,
+       "subscription_user_id":2234,
+       "settelment_date":"2021-06-20 20:58:09",
+       "settlement_duration":20,
+       "is_settled":0,
+       "had_entity":null
+    }
+ ]

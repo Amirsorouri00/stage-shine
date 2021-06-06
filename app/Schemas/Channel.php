@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App\Schemas;
 
 
 use Illuminate\Database\Eloquent\Model;
@@ -12,10 +12,11 @@ class Channel extends BaseModel
 
     protected $table = 'channels';
     protected $fillable = array('name', 'category_id', 'description', 'channel_cover');
-    protected $visible = array('id', 'name', 'category_id', 'description', 'channel_cover');
+    protected $visible = array('name', 'category_id', 'description', 'channel_cover');
 
     public function Category()
     {
         return $this->hasOne('APP/Models\Category', 'category_id');
     }
+
 }

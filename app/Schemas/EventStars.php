@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App\Schemas;
 
 use App\Constants\Tables;
 use Illuminate\Database\Eloquent\Model;

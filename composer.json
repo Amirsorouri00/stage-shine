@@ -6,14 +6,19 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "ext-json": "*",
         "amirsorouri00/eventbrite": "dev-master",
+        "darkaonline/l5-swagger": "^8.0",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.12",
         "laravel/helpers": "^1.4",
         "laravel/passport": "^10.1",
-        "laravel/tinker": "^2.5"
+        "laravel/tinker": "^2.5",
+        "nikolag/laravel-square": "^2.6",
+        "optimus/bruno": "^6.0",
+        "spatie/laravel-tags": "^3.1"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

@@ -40,12 +40,12 @@ class CreateForeignKeys extends Migration {
 						->onDelete('cascade')
 						->onUpdate('restrict');
 		});
-		Schema::table(Tables::STAGESHINE_EVENT_STARS, function(Blueprint $table) {
+		Schema::table(Tables::STAGESHINE_EVENT_RATE, function(Blueprint $table) {
 			$table->foreign('event_id')->references('id')->on(Tables::STAGESHINE_EVENTS)
 						->onDelete('restrict')
 						->onUpdate('restrict');
 		});
-		Schema::table(Tables::STAGESHINE_EVENT_STARS, function(Blueprint $table) {
+		Schema::table(Tables::STAGESHINE_EVENT_RATE, function(Blueprint $table) {
 			$table->foreign('user_id')->references('id')->on(Tables::STAGESHINE_USERS)
 						->onDelete('restrict')
 						->onUpdate('restrict');
@@ -84,10 +84,10 @@ class CreateForeignKeys extends Migration {
 		Schema::table(Tables::STAGESHINE_EVENT_COMMENTS, function(Blueprint $table) {
 			$table->dropForeign('event_comments_event_id_foreign');
 		});
-		Schema::table(Tables::STAGESHINE_EVENT_STARS, function(Blueprint $table) {
+		Schema::table(Tables::STAGESHINE_EVENT_RATE, function(Blueprint $table) {
 			$table->dropForeign('event_stars_event_id_foreign');
 		});
-		Schema::table(Tables::STAGESHINE_EVENT_STARS, function(Blueprint $table) {
+		Schema::table(Tables::STAGESHINE_EVENT_RATE, function(Blueprint $table) {
 			$table->dropForeign('event_stars_user_id_foreign');
 		});
 		Schema::table(Tables::STAGESHINE_USER_EVENTS, function(Blueprint $table) {

@@ -10,7 +10,7 @@ class CreateEventStarsTable extends Migration {
     /**
      * @var string
      */
-    protected $table = Tables::STAGESHINE_EVENT_STARS;
+    protected $table = Tables::STAGESHINE_EVENT_RATE;
 
     /**
      * The database schema.
@@ -38,6 +38,8 @@ class CreateEventStarsTable extends Migration {
 	{
 		Schema::create($this->table, function(Blueprint $table) {
             $table->integer('id', true);
+
+            $table->tinyInteger('rate')->comment('must be in a range of 0 to 5');
 
 			$table->bigInteger('event_id')->nullable();
 			$table->bigInteger('user_id')->nullable();
