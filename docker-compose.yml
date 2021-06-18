@@ -1,0 +1,55 @@
+version: "3.7"
+services:
+  stage_shine:
+    build:
+      args:
+        user: Amirhossein
+        uid: 2222
+        gid: 2222
+      context: ./
+      dockerfile: Dockerfile
+    image: stage_shine
+    container_name: stage_shine-app
+    restart: unless-stopped
+    working_dir: /app
+    volumes:
+      - ./:/app
+    # tty: true
+    command: bash -c "php artisan migrate && php artisan passport:install && php-fpm"
+    networks:
+      - stage_shine_network
+    depends_on:
+      - db
+
+  db:
+    image: mysql:5.7
+    container_name: stage_shine-dbnode
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: laravel
+      MYSQL_ROOT_PASSWORD: 123123
+      MYSQL_ALLOW_EMPTY_PASSWORD: "true"
+      MYSQL_PASSWORD: 123123
+      # MYSQL_USER: ${DB_USERNAME}
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    volumes:
+      - ./docker-compose/mysql:/docker-entrypoint-initdb.d
+    networks:
+      - stage_shine_network
+
+  nginx:
+    image: nginx:alpine
+    container_name: stage_shine-nginx
+    restart: unless-stopped
+    ports:
+      - 8000:80
+    volumes:
+      - ./:/app
+      - ./docker-compose/nginx:/etc/nginx/conf.d/
+    networks:
+      - stage_shine_network
+
+networks:
+  stage_shine_network:
+    driver: bridge

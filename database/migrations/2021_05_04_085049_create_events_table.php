@@ -44,7 +44,7 @@ class CreateEventsTable extends Migration {
 			$table->enum('status', array('draft', 'supply', 'started', 'ended', 'completed'))->nullable()->default('draft')->index();
 			$table->datetimeTz('start')->nullable();
 			$table->datetimeTz('end')->nullable();
-			$table->tinyInteger('start')->default(0)->comment('0 not starred and 1 is starred.');
+			$table->tinyInteger('is_started')->default(0)->comment('0 not starred and 1 is starred.');
 			$table->bigInteger('duration')->nullable();
 			$table->string('file_name', 1024)->nullable();
 			$table->string('link', 2048)->nullable();
